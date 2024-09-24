@@ -21,7 +21,7 @@ document.getElementById('donation-noakhali').addEventListener('click',function(e
 
 
         const historyItem = document.createElement('div');
-historyItem.className = 'bg-white p-8 rounded-xl border border-indigo-500'
+historyItem.className = 'bg-white p-8 rounded-xl border border-gray-400'
 historyItem.innerHTML = ` 
 <P> ${newBalance} Donated in flood noakhali </P>
 
@@ -31,6 +31,8 @@ historyItem.innerHTML = `
 `
 const historyContainer1 = document.getElementById('history-container-1')
 historyContainer1.insertBefore(historyItem, historyContainer1.firstChild )
+
+alert('Donate money successful')
 
 
         
@@ -66,7 +68,7 @@ document.getElementById('donation-feni').addEventListener('click', function(even
 
 
         const historyItem = document.createElement('div');
-historyItem.className = 'bg-white p-8 rounded-xl border border-indigo-500'
+historyItem.className = 'bg-white p-8 rounded-xl border border-gray-400'
 historyItem.innerHTML = ` 
 <P> ${newBalance} Donated in flood Feni </P>
 
@@ -76,6 +78,8 @@ historyItem.innerHTML = `
 `
 const historyContainer2 = document.getElementById('history-container-2')
 historyContainer2.insertBefore(historyItem, historyContainer2.firstChild)
+
+alert('Donate money successful')
     }
 
     else{
@@ -101,7 +105,7 @@ document.getElementById('donation-aid').addEventListener('click', function(event
         document.getElementById('total-account-balance').innerText = totalNewBalance;
 
         const historyItem = document.createElement('div');
-        historyItem.className = 'bg-white p-8 rounded-xl border border-indigo-500'
+        historyItem.className = 'bg-white p-8 rounded-xl border border-gray-400'
         historyItem.innerHTML = ` 
         <P> ${newBalance} Donated in flood noakhali </P>
         
@@ -111,6 +115,8 @@ document.getElementById('donation-aid').addEventListener('click', function(event
         `
         const historyContainer3 = document.getElementById('history-container-3')
         historyContainer3.insertBefore(historyItem, historyContainer3.firstChild )
+
+        alert('Donate money successful')
         
     }
     
@@ -140,7 +146,7 @@ historyTab.addEventListener('click',function(){
 
 
     const historyItem = document.createElement('div');
-    historyItem.className = 'bg-white p-8 rounded-xl border border-indigo-500'
+    historyItem.className = 'bg-white p-8 rounded-xl border border-gray-400'
     historyItem.innerHTML = ` 
     <P> ${newBalance} Donated in flood noakhali </P>
     
@@ -161,7 +167,19 @@ historyTab.addEventListener('click',function(){
 })
 
 
-// 
+// donation tab
+
+donationTab.addEventListener('click', function(){
+    donationTab.classList.add('bg-green-300')
+    historyTab.classList.remove('bg-green-300')
+
+    document.getElementById('donation-form').classList.remove('hidden');
+    document.getElementById('history-section').classList.add('hidden');
+})
+
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = 'blog.html'
+})
 
 
 
